@@ -5,13 +5,16 @@
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Graphenrechner</title>
+    <title>Graphen-Rechner</title>
+    <link rel="stylesheet" href="./src/style.css"/>
     <script type="module" src="./src/main.js"></script>
 </head>
 <body>
   <div id="app"></div>
     <h1>Graphenprogramm</h1>
-  <button id="randomBtn">Random</button>
+<div id="controls">
+  <input type="file" id="fileInput" accept=".csv">
+  <button id="fileButton">CSV laden</button>
   <input type="number" name="nodes" id="nodes" min="2" max="100" placeholder="Select a number">
   <label for="nodes">Nodes</label>
   <input type="number" name="density" id="density" min="1" max="100" placeholder="Select a number">
@@ -22,5 +25,17 @@
   <label for="directed">Directed</label>
   <button id="clearBtn">Clear</button>
   <button id ="generateBtn">Generate</button>
+    <button id="randomBtn">Random</button>
+</div>
+  <h2>Visualisierung:</h2>
+  <canvas id="graphCanvas" width="600" height="400" style="border:1px solid #ccc;"></canvas>
+
+  <h2>Adjazenzmatrix:</h2>
+  <pre id="matrixDisplay">Noch keine Matrix vorhanden.</pre>
+
+  <h2>Analyse:</h2>
+  <pre id="analysisOutput">Noch keine Analyse.</pre>
+
+
 </body>
 </html>
